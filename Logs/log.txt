@@ -1,0 +1,43 @@
+2020-09-08 16:34:38.868 +09:00 [DBG] Hosting starting
+2020-09-08 16:34:39.064 +09:00 [DBG] Loaded hosting startup assembly SeriLogTest
+2020-09-08 16:34:39.072 +09:00 [INF] Application started. Press Ctrl+C to shut down.
+2020-09-08 16:34:39.072 +09:00 [INF] Hosting environment: Development
+2020-09-08 16:34:39.073 +09:00 [INF] Content root path: D:\project\github\SeriLogTest
+2020-09-08 16:34:39.073 +09:00 [DBG] Hosting started
+2020-09-08 16:34:39.105 +09:00 [INF] Request starting HTTP/1.1 GET http://localhost:8684/weatherforecast  
+2020-09-08 16:34:39.109 +09:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2020-09-08 16:34:39.134 +09:00 [DBG] 1 candidate(s) found for the request path '/weatherforecast'
+2020-09-08 16:34:39.140 +09:00 [DBG] Endpoint 'SeriLogTest.Controllers.WeatherForecastController.Get (SeriLogTest)' with route pattern 'WeatherForecast' is valid for the request path '/weatherforecast'
+2020-09-08 16:34:39.143 +09:00 [DBG] Request matched endpoint 'SeriLogTest.Controllers.WeatherForecastController.Get (SeriLogTest)'
+2020-09-08 16:34:39.144 +09:00 [INF] Executing endpoint 'SeriLogTest.Controllers.WeatherForecastController.Get (SeriLogTest)'
+2020-09-08 16:34:39.153 +09:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexTypeModelBinderProvider"]
+2020-09-08 16:34:39.200 +09:00 [INF] Route matched with {action = "Get", controller = "WeatherForecast"}. Executing controller action with signature System.Collections.Generic.IEnumerable`1[SeriLogTest.WeatherForecast] Get() on controller SeriLogTest.Controllers.WeatherForecastController (SeriLogTest).
+2020-09-08 16:34:39.204 +09:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2020-09-08 16:34:39.204 +09:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2020-09-08 16:34:39.204 +09:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2020-09-08 16:34:39.204 +09:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2020-09-08 16:34:39.204 +09:00 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)"]
+2020-09-08 16:34:39.205 +09:00 [DBG] Executing controller factory for controller SeriLogTest.Controllers.WeatherForecastController (SeriLogTest)
+2020-09-08 16:34:39.205 +09:00 [DBG] Executed controller factory for controller SeriLogTest.Controllers.WeatherForecastController (SeriLogTest)
+2020-09-08 16:34:40.869 +09:00 [INF] Executed action SeriLogTest.Controllers.WeatherForecastController.Get (SeriLogTest) in 1660.4211ms
+2020-09-08 16:34:40.870 +09:00 [INF] Executed endpoint 'SeriLogTest.Controllers.WeatherForecastController.Get (SeriLogTest)'
+2020-09-08 16:34:40.871 +09:00 [ERR] An unhandled exception has occurred while executing the request.
+System.DivideByZeroException: Attempted to divide by zero.
+   at SeriLogTest.Controllers.WeatherForecastController.Get() in D:\project\github\SeriLogTest\Controllers\WeatherForecastController.cs:line 32
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.SyncObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeNextActionFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|19_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-09-08 16:34:40.972 +09:00 [INF] Request finished in 1869.6811ms 500 text/html; charset=utf-8
